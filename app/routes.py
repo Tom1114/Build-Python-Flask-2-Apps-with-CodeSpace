@@ -1,11 +1,7 @@
-from flask import Flask, render_template, redirect, flash
-from config import Config
+from flask import render_template, redirect, flash
+from app.forms import LoginForm
 
-from forms import LoginForm
-
-app = Flask(__name__)
-app.config.from_object(Config)
-
+from app import app
 
 @app.route("/")
 @app.route("/index")
